@@ -1,0 +1,691 @@
+Name: UI
+Type: UICategoryFolder
+Children:
+- Name: DefaultStyleSheet
+  Id: g=8da2b5865c73184b748c69f73d34bedf
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ButtonStyle
+    - Name: Accent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: BorderedRectangular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+  - Name: InputBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: GaugeStyle
+  - Name: NavigationPanelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: NavigationPanelStyle
+  - Name: ChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ChartStyle
+  - Name: DataListStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScrollBarStyle
+  - Name: AccordionStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: LabelStyle
+  - Name: RadioButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RadioButtonStyle
+  - Name: CheckBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: CheckBoxStyle
+  - Name: RectangleStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+  - Name: ScreenStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScreenStyle
+- Name: NativePresentationEngine
+  Type: NativePresentationEngine
+  ReferenceType: HasOrderedComponent
+  Children:
+  - Name: VirtualKeyboard
+    Type: BaseDataVariableType
+    DataType: VirtualKeyboardEngineTypeEnum
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Optix_Sample_SVGPieGenerator/UI/MainWindow"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Optix_Sample_SVGPieGenerator/UI/DefaultStyleSheet"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Users/Anonymous"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+  - Name: Sessions
+    Type: BaseObjectType
+- Name: MainWindow
+  Id: g=01a7e8933afd7c95fe894b0859308138
+  Supertype: Window
+  Children:
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1024.0
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 768.0
+  - Name: Caption
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Optix_Sample_SVGPieGenerator@BrowseName"
+  - Name: AdvancedSVGImage1
+    Type: AdvancedSVGImage
+    Children:
+    - Name: SVGElementProperties
+      Type: BaseObjectType
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=14;%PROJECTDIR%/pie42.svg"
+    - Class: Reference
+      Target: ns=5;i=1360
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 320.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 320.0
+    - Name: PieManager
+      Type: NetLogic
+      Children:
+      - Name: slices
+        Type: BaseDataVariableType
+        DataType: Int32
+      - Name: xml
+        Type: BaseDataVariableType
+        DataType: String
+      - Class: Method
+        Name: GeneratePie
+      - Name: diameter
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 100
+      - Name: updateScg
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: updateScgChanged
+        Type: VariableChangedEventDispatcher
+        Children:
+        - Name: VariableNodePath
+          Type: BaseVariableType
+          DataType: NodePath
+          Value: "../updateScg"
+        - Name: VariableValueChangedEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../..@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "GeneratePie"
+            - Name: MethodContainer2
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../..@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "SetImageContent"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: ImageContent
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Description: {"NamespaceIndex":5,"TextId":"SetImageContentImageContentDescription"}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../xml"
+          - Name: EventArguments
+            Type: VariableValueChangedEvent
+            Children:
+            - Name: VariableNodeId
+              Type: BaseVariableType
+              DataType: NodeId
+            - Name: NewValue
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: OldValue
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
+      - Name: slicesChanged
+        Type: VariableChangedEventDispatcher
+        Children:
+        - Name: VariableNodePath
+          Type: BaseVariableType
+          DataType: NodePath
+          Value: "../slices"
+        - Name: VariableValueChangedEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Toggle"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":3,"TextId":"ToggleVariableToModifyDescription"}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../../updateScg@NodeId"
+                - Name: ArrayIndex
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":3,"TextId":"ToggleArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+          - Name: EventArguments
+            Type: VariableValueChangedEvent
+            Children:
+            - Name: VariableNodeId
+              Type: BaseVariableType
+              DataType: NodeId
+            - Name: NewValue
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: OldValue
+              Type: BaseVariableType
+              DataType: BaseDataType
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: BottomMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 148.0
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Slices"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 420.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 660.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: FontWeight
+      Type: BaseDataVariableType
+      DataType: FontWeightEnum
+      ModellingRule: Optional
+      Value: 800
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+  - Name: SpinBox1
+    Type: SpinBox
+    Children:
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Double
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../AdvancedSVGImage1/PieManager/slices"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 120.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 480.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 660.0
+    - Name: MinValue
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+    - Name: MaxValue
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+      Value: 100.0
+  - Name: ScrollView1
+    Type: ScrollView
+    Children:
+    - Name: ContentWidth
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentHeight
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewWidth
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewHeight
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentX
+      Type: BaseDataVariableType
+      DataType: Size
+    - Name: ContentY
+      Type: BaseDataVariableType
+      DataType: Size
+    - Class: Reference
+      Target: ns=5;i=1394
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 240.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: EditableLabel1
+      Type: EditableLabel
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../AdvancedSVGImage1/PieManager/xml"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: WordWrap
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#bbb9b9"
+      - Name: FontFamily
+        Type: BaseDataVariableType
+        DataType: Font
+        ModellingRule: Optional
+      - Name: Elide
+        Type: BaseDataVariableType
+        DataType: ElideEnum
+        ModellingRule: Optional
+        Value: 3
+      - Name: FontItalic
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+- File: Screens/Screens.yaml
+- File: Keyboards/Keyboards.yaml
